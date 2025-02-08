@@ -3,7 +3,7 @@ from PIL import Image
 
 ##########################################      Title      ##############################################
 
-image = Image.open('bike.png') 
+image = Image.open('bike_price/bike.png')
 st.image(image,width=200)
 st.title("Bike Price Prediction APP")
 st.header("A Machine Learning Project created by Hardik Patil (Datascience student)")
@@ -21,7 +21,7 @@ import numpy as np
 
 ######################################      Loading Datset      ###########################################
 
-data = pd.read_csv('Used_Bikes.csv')
+data = pd.read_csv('bike_price/Used_Bikes.csv')
 df = pd.DataFrame(data=data)
 
 ######################################      Encoding Datset      ###########################################
@@ -123,7 +123,7 @@ new_data = np.array(input_data).reshape(1, -1)  # Ensure shape (1,7)
 
 ######################################      loading Model       #########################################
 
-loaded_model = keras.models.load_model("bikepredictor.keras")
+loaded_model = keras.models.load_model('bike_price/bikepredictor.keras')
 
 ######################################      Predicting Outcome       #########################################
 
